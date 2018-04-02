@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CommentReceived.aspx.cs"
-    Inherits="QualiDemo.Report.CommentReceived" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CommentReceived.aspx.cs" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
