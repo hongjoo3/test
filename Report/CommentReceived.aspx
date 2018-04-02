@@ -153,64 +153,6 @@
                             </div>
                         </div>
                     </div>
-               <%--     <div class="form-group form-md-line-input row">
-                        <label class="col-md-2 control-label" for="txt_leadqna" style="text-align: left;">
-                            잠재고객에 대해 알고 있고<br />
-                            관리를 하고 있는지요 ?</label>
-                        <div class="col-md-10">
-                            <asp:TextBox ID="txt_leadqna" runat="server" CssClass="form-control"></asp:TextBox>
-                            <div class="form-control-focus">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="panel-group" id="accordion">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#lead">
-                                            자세히보기</a>
-                                    </h4>
-                                </div>
-                                <div id="lead" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <iframe src="https://www.microsoft.com/dynamics/crm/content/rc/2011/ko-kr/on-prem/5.0/leadroutingdiagram.aspx?c=hv"
-                                            frameborder="0" width="100%" height="300" marginwidth="0" marginheight="0"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /panel -->
-                        </div>
-                    </div>
-                    <div class="form-group form-md-line-input row">
-                        <label class="col-md-2 control-label" for="txt_opptyqny">
-                            영업기회 관리를<br />
-                            하고 있는지요 ?</label>
-                        <div class="col-md-10">
-                            <asp:TextBox ID="txt_opptyqny" runat="server" CssClass="form-control"></asp:TextBox>
-                            <div class="form-control-focus">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="panel-group" id="accordion2">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#oppty">
-                                            자세히보기 </a>
-                                    </h4>
-                                </div>
-                                <div id="oppty" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <iframe src="https://www.microsoft.com/dynamics/crm/content/rc/2011/ko-kr/on-prem/5.0/opportunitydiagram.aspx?c=hv"
-                                            frameborder="0" width="100%" height="300" marginwidth="0" marginheight="0"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /panel -->
-                        </div>
-                    </div>--%>
                     <div class="form-group form-md-line-input row has-success">
                         <label class="col-md-2 control-label" for="txt_desc">
                             기타문의사항</label>
@@ -230,7 +172,7 @@
                 </form>
             </div>
         </div>
-        <%--<div id="footer" style="border-top: 2px solid #ccc; margin-top: 50px;">
+        <div id="footer" style="border-top: 2px solid #ccc; margin-top: 50px;">
             <br />
             <p style="padding-top: 10px;">
                 ㈜퀄리소프트&nbsp;&nbsp;&nbsp;&nbsp;대표이사 : 변유신&nbsp;&nbsp;&nbsp;&nbsp;TEL : 02. 6925.
@@ -239,7 +181,7 @@
                 서울특별시 마포구 상암동 마포비즈니스센터 508호(우 03911)</p>
             <p style="font-size: 9px;">
                 COPYRIGHTS © QUALISOFT. ALL RIGHTS RESERVED.</p>
-        </div>--%>
+        </div>
     </div>
     <script src="../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>
