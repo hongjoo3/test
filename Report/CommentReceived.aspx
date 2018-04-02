@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CommentReceived.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CommentReceived.aspx.cs" Inherits="QualiDemo.Report.CommentReceived"%>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,11 +7,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="../Content/asset/global/components.min.css" rel="stylesheet" type="text/css" />
-    <link href="../Content/asset/global/plugins.min.css" rel="stylesheet" type="text/css" />
-    <link href="../Content/asset/global/layout.min.css" rel="stylesheet" type="text/css" />
-    <link href="../Content/asset/global/font-awesome.css" rel="stylesheet" type="text/css" /> 
     <style type="text/css">
         *
         {
@@ -183,88 +178,5 @@
                 COPYRIGHTS © QUALISOFT. ALL RIGHTS RESERVED.</p>
         </div>
     </div>
-    <script src="../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../Scripts/three.min.js" type="text/javascript"></script>
-    <script src="../Scripts/BVHLoader.js" type="text/javascript"></script>
-    <script src="../Scripts/OrbitControls.js" type="text/javascript"></script>
-       <script type="text/javascript">
-
-           window.onload = function () {
-               Remove_loading();
-               Remove_border();
-               init();
-               animate();
-           }
-
-           function Validation_Save() {
-               if ($("#txt_name").val() == null || $("#txt_name").val() == "") {
-                   alert("이름을 입력해주세요");
-                   $("#txt_name").focus();
-                   return false;
-               }
-               return true;
-           }
-
-           function Remove_border() {
-               if (window.innerWidth < 700) {
-                   document.getElementById('border').classList.remove('bordered');
-               }
-               return;
-           }
-
-           function Remove_loading() {
-               document.getElementById('loading').style.display = 'none';
-               return;
-           }
-
-           var clock = new THREE.Clock();
-           var camera, controls, renderer;
-           var scene = new THREE.Scene();
-           var mixer, skeletonHelper;
-
-
-           var loader = new THREE.BVHLoader();
-           loader.load("../Scripts/pirouette.bvh", function (result) {
-               skeletonHelper = new THREE.SkeletonHelper(result.skeleton.bones[0]);
-               skeletonHelper.skeleton = result.skeleton; // allow animation mixer to bind to SkeletonHelper directly
-               var boneContainer = new THREE.Group();
-               boneContainer.add(result.skeleton.bones[0]);
-               scene.add(skeletonHelper);
-               scene.add(boneContainer);
-               // play animation
-               mixer = new THREE.AnimationMixer(skeletonHelper);
-               mixer.clipAction(result.clip).setEffectiveWeight(1.0).play();
-           });
-
-           function init() {
-               camera = new THREE.PerspectiveCamera(300, window.innerWidth / window.innerHeight, 1, 1000);
-               camera.position.set(0, 200, 400);
-               //controls = new THREE.OrbitControls(camera);
-               //controls.enable = false;
-               //controls.minDistance = 300;
-               //controls.maxDistance = 700;            
-               // renderer
-               renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-               renderer.setClearColor(0x000000, 0);
-               renderer.setPixelRatio(window.devicePixelRatio);               
-               renderer.setSize(window.innerWidth*0.3, window.innerHeight*0.3);
-               document.getElementById('banner').appendChild(renderer.domElement);
-               window.addEventListener('resize', onWindowResize, false);
-           }
-
-           function onWindowResize() {
-               camera.aspect = window.innerWidth / window.innerHeight;
-               camera.updateProjectionMatrix();
-               renderer.setSize(window.innerWidth*0.3, window.innerHeight*0.1);
-           }
-           function animate() {
-               requestAnimationFrame(animate);
-               var delta = clock.getDelta();
-               if (mixer) mixer.update(delta);
-               renderer.render(scene, camera);
-           }
-
-    </script>
 </body>
 </html>
